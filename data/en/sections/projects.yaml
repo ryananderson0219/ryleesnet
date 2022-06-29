@@ -1,0 +1,76 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Professional
+  filter: "professional"
+- name: Home Lab
+  filter: "homelab"
+- name: Hobby
+  filter: "hobby"
+
+# your projects
+projects:
+- name: Proxmox VE
+  logo: /images/sections/projects/proxmox-logo-stacked-840px.png
+  role: Infrastructure Engineer
+  timeline: "Jun 2016 - Present"
+  #repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  url: "https://pve.rylees.net"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: Proxmox VE is a complete, open-source server management platform for enterprise virtualization.
+  tags: ["professional", "proxmox", "virtual", "homelab"]
+
+- name: Proxmox Backup Server
+  logo: /images/sections/projects/proxmox-logo-stacked-840px.png
+  role: Infrastructure Engineer
+  timeline: "Nov 2020 - Present"
+  #repo: https://github.com/tensorflow/tensorflow
+  url: "https://pbs.rylees.net"
+  summary: Proxmox Backup Server is an enterprise backup solution, for backing up and restoring VMs, containers, and physical hosts.
+  tags: ["professional", "proxmox", "backup", "homelab"]
+
+- name: TrueNAS
+  logo: /images/sections/projects/truenas_400x400.jpg
+  role: Infrastructure Engineer
+  timeline: "Jun 2016 - Present"
+  #repo: https://github.com/hossainemruz/toha
+  url: "https://truenas.rylees.net"
+  summary: TrueNAS is a Network Attached Storage solution that shares and protects data from threats like ransomware and malware.
+  tags: ["professional","truenas","smb","nfs","iSCSI", "homelab"]
+
+- name: QVD VDI
+  logo: /images/sections/projects/qvd_400x400.png
+  role: Infrastructure Engineer
+  timeline: "Aug 2021 - Present"
+  #repo: https://github.com/hossainemruz/toha
+  url: "https://vdi.rylees.net"
+  summary: Desktop virtualization solution in Linux environment that provides a high desktop density.
+  tags: ["hobby","qvd","vdi", "homelab"]
+
+- name: Kasm Workspaces
+  logo: /images/sections/projects/kasm_logo.png
+  role: Infrastructure Engineer
+  timeline: "Aug 2021 - Present"
+  #repo: https://github.com/hossainemruz/toha
+  url: "https://vdi.rylees.net"
+  summary: Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
+  tags: ["hobby","kasm","vdi", "homelab"]
+
+- name: Jitsi
+  logo: /images/sections/projects/jitsi_400x400.jpg
+  role: Infrastructure Engineer
+  timeline: "Aug 2021 - Present"
+  #repo: https://github.com/hossainemruz/toha
+  url: "https://vdi.rylees.net"
+  summary: More secure, more flexible, and completely free video conferencing
+  tags: ["hobby","jitsi","videoconference", "homelab"]

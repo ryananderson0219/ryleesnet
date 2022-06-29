@@ -1,0 +1,17 @@
+# some information about you
+name: "Ryan Anderson"
+nickname: "Ryan"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hello, I'm"
+image: "images/authors/ryan.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "ryan.anderson@rylees.net"
+  phone: "+1 (615) 338-5960"
+
+# some summary about what you do
+summary:
+  - I am an Infrastructure Engineer
+  - I love servers
+  - I an a huge fan of open-source projects
+  - I love to work with fun projects

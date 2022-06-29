@@ -1,0 +1,49 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Infrastructure Engineer
+# your company information
+company:
+  name: Rylees.net
+  url: "https://rylees.net"
+
+# your resume. this file path should be relative to you "static" directory
+resume: "files/resume.pdf"
+
+# a summary about you
+summary: 'I am a passionate infrastructure engineer with 6+ years of working experience. I have deployed and currently maintain [ProxmoxVE](https://proxmox.com/en/proxmox-ve/), [Proxmox Backup Server](https://proxmox.com/en/proxmox-backup-server/), and [TrueNAS](https://www.truenas.com/) for physical hosts. I implemented Ceph in my Proxmox Cluster to create a [Hyper-Converged Cluster](https://pve.proxmox.com/wiki/Deploy_Hyper-Converged_Ceph_Cluster).'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+#socialLinks:
+#- name: Github
+#  icon: "fab fa-github"
+#  url: "https://github.com/ryananderson0219"
+
+# your soft skills
+# give the percentage between 50 to 100 with 5 intervals.
+# currently supported colors: blue, yellow, pink, green, sky, orange
+softSkills:
+- name: Infrastructure
+  percentage: 95
+  color: green
+- name: Virtualization
+  percentage: 95
+  color: green
+- name: Support
+  percentage: 100
+  color: blue
+- name: Networking
+  percentage: 60
+  color: sky
+- name: Firewalls
+  percentage: 60
+  color: sky
+

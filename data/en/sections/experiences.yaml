@@ -1,0 +1,73 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: Rylees.net
+    url: "https://rylees.net"
+    location: Nashville, TN
+    # company overview
+    overview: Rylees.net is a my digital playground! 
+  positions:
+  - designation: Homelabber
+    start: Aug 2015
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Design, deploy, and maintain infrastructure hardware/software for purposes of learning. 
+
+- company:
+    name: Loews Hotels & Co
+    url: "https://loewshotels.com"
+    location: Nashville, TN
+    overview: Loews Hotels & Co was founded in 1960 and continues to own and operate hotels and resorts in the United States and Canada.
+  positions:
+  - designation: User Services Desk Supervisor
+    start: August 2021
+    #end: 
+    responsibilities:
+    - Supervise and provide technical guidance to the staff of Service Desk analysts.
+    - Coordinate with Hotel IT staff and vendors to resolve complex issues.
+    - Manage ticketing system (ServiceNOW).
+
+- company:
+    name: BFC Solutions
+    url: "https://bfcsolutions.com"
+    location: Nashville, TN
+    overview: BFC Solutions, formerly Bonded Filter Co., merged with PureAir in 2018 to become the largest self-performing, preventive maintenance service provider for commercial HVAC systems in the U.S.
+  positions:
+  - designation: Systems Administrator
+    start: April 2021
+    end: August 2021
+    responsibilities:
+    - Provision cell phones via IBM MaaS360 for field techs.
+    - Deploy and manage endpoints for employees - Desktops,Laptops, and peripherals.
+    - Support remote users via Connectwise Automate or Teamviewer.
+    - Support Infrastructure including VMWare ESXi, Exchange,Terminal Servers.
+    - Provision accounts for AD and E-mail.
+
+
+- company:
+    name: Loews Hotels & Co
+    url: "https://loewshotels.com"
+    location: Nashville, TN
+    overview: Loews Hotels & Co was founded in 1960 and continues to own and operate hotels and resorts in the United States and Canada.
+  positions:
+  - designation: Infrastructure Services Analyst
+    start: June 2016
+    end: April 2021
+    responsibilities:
+    - Management, Installation and Configuration of Technical Hardware, Software and Infrastructure at the Loews Hotels Primary and Secondary Data Centers and Loews Hotels Properties.
+    - ESX VMWare 5.5-6.5 managed with vSphere, Dell EMC Storage, Citrix XenDesktop, Citrix PVS ,Commvault/Rubrik Backups, Active Directory and GPO Management. Windows Server 2008-2016.
+    - Set-up and decommission virtual and physical servers, deployed Commvault back-up solution ,SME of SentinelOne anti-virus, deploy application packages via LANDesk, migrate local VDI to IaaS, tested and deployed zero touch Dell Wyse clients, resolve escalated tickets from users.
+    - Travel to hotel properties for IT projects, including hotel set-ups, hotel decommissions, and local IT support.
+    - Participate in 24/7 rotational on-call.

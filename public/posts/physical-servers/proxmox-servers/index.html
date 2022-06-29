@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proxmox Servers</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<meta property="og:title" content="Proxmox Servers" />
+<meta property="og:description" content="This is the hardware list that I have used to build my own &ldquo;servers&rdquo;. Please note that this is all consumer-grade hardware, but is perfect for my setup: Less power, noise, and heat. Keep in mind that I have bought/built two of these machines. They are slightly different, but they both have AMD CPUs, one is a Ryzen and the other is an FX. Both have 8vCPUs, 32GB Memory, 2TBs HD space." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rylees.net/posts/physical-servers/proxmox-servers/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-08T06:00:20+06:00" />
+<meta property="article:modified_time" content="2020-06-08T06:00:20+06:00" />
+
+
+
+    
+    
+<meta name="description" content="Proxmox Servers" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      Rylees.net</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/physical-devices/">Physical Devices</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/physical-devices/access-points/" title="Access Points">Access Points</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/physical-servers/">Physical Servers</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/physical-servers/pbs/" title="Proxmox Backup Server">Proxmox Backup Server</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/physical-servers/proxmox-servers/" title="Proxmox Servers">Proxmox Servers</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/virtual-servers/">Virtual Servers</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/virtual-servers/docker/" title="Docker">Docker</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/virtual-servers/ivideon/" title="Ivideon">Ivideon</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/virtual-servers/nginx-proxy-manager/" title="Nginx Proxy Manager">Nginx Proxy Manager</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/virtual-servers/pfsense/" title="pfSense">pfSense</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://rylees.net/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/authors/ryan_hub304b385261eb0a0016f110f3cd56c70_165772_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Ryan Anderson</h5>
+          <p>June 8, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Proxmox Servers</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <p>This is the hardware list that I have used to build my own &ldquo;servers&rdquo;. Please note that this is all consumer-grade hardware, but is perfect for my setup: Less power, noise, and heat. Keep in mind that I have bought/built two of these machines. They are slightly different, but they both have AMD CPUs, one is a Ryzen and the other is an FX. Both have 8vCPUs, 32GB Memory, 2TBs HD space.</p>
+<p>The below list is a guide and I will update the list as they become unavailable.</p>
+<p>You can start with 1 machine, but to get the most out of all the features, I highly recommend getting 3 machines. I only have 2, but will be working to get another built.</p>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Price/Each</th>
+<th>Quantity</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://amzn.to/3H10n6Y">Rosewill 2U Server Chassis</a></td>
+<td>$169.99</td>
+<td>1</td>
+<td>$169.99</td>
+</tr>
+<tr>
+<td><a href="https://amzn.to/3yYh4ek">4-Bay Mobile Rack Backplane</a></td>
+<td>$112.53</td>
+<td>1</td>
+<td>$112.53</td>
+</tr>
+<tr>
+<td><a href="https://amzn.to/3fLk1Yy">ASRock Mini-ITX Motherboard (B450 Gaming-ITX/AC)</a></td>
+<td>$146.99</td>
+<td>1</td>
+<td>$146.99</td>
+</tr>
+<tr>
+<td><a href="https://amzn.to/3IrIBd3">AMD Ryzen 5 2400G</a></td>
+<td>$279.00</td>
+<td>1</td>
+<td>$279.00</td>
+</tr>
+<tr>
+<td><a href="https://amzn.to/3AnCioj">Netac 32GB (2x16GB) DDR4</a></td>
+<td>$157.99</td>
+<td>1</td>
+<td>$157.99</td>
+</tr>
+<tr>
+<td><a href="https://amzn.to/3tNMepF">SAMSUNG 970 EVO 250GB - NVMe</a></td>
+<td>$157.99</td>
+<td>1</td>
+<td>$157.99</td>
+</tr>
+<tr>
+<td><a href="https://amzn.to/3KzngQO">SanDisk Ultra 3D NAND 1TB</a></td>
+<td>$99.99</td>
+<td>4</td>
+<td>$399.96</td>
+</tr>
+<tr>
+<td><a href="https://amzn.to/3FSpCXB">Power Supply 500W 80 Plus Bronze</a></td>
+<td>$27.99</td>
+<td>1</td>
+<td>$27.99</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Total Cost</td>
+<td></td>
+<td></td>
+<td>$1452.44</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hardware">Hardware</h4>
+<h5 id="case">Case</h5>
+<p><a href="https://amzn.to/3H10n6Y">Rosewill 2U Server Chassis</a></p>
+<p><a href="https://amzn.to/3H10n6Y"><img src="https://m.media-amazon.com/images/I/61KgI5oRc1L._AC_SL1500_.jpg" alt="Rosewill 2U Server Chassis"></a></p>
+<h5 id="hard-drive-backplane">Hard Drive Backplane</h5>
+<p><a href="https://amzn.to/3yYh4ek">4-Bay Mobile Rack Backplane</a></p>
+<p><a href="https://amzn.to/3yYh4ek"><img src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=US&amp;ASIN=B00OUSU8MI&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=ryleesnet-20" alt="4-Bay Mobile Rack Backplane"></a></p>
+<h5 id="motherboard">Motherboard</h5>
+<p><a href="https://amzn.to/3fLk1Yy">ASRock Mini-ITX Motherboard (B450 Gaming-ITX/AC)</a></p>
+<p><a href="https://amzn.to/3fLk1Yy"><img src="https://m.media-amazon.com/images/I/71708HNuRnL._AC_SL1200_.jpg" alt="ASRock Mini-ITX Motherboard (B450 Gaming-ITX/AC)"></a></p>
+<h5 id="cpu">CPU</h5>
+<p><a href="https://amzn.to/3IrIBd3">AMD Ryzen 5 2400G</a></p>
+<p><a href="https://amzn.to/3IrIBd3"><img src="https://m.media-amazon.com/images/I/61LtQsThBZL._AC_SL1500_.jpg" alt="AMD Ryzen 5 2400G"></a></p>
+<h5 id="memory">Memory</h5>
+<p><a href="https://amzn.to/3AnCioj">Netac 32GB (2x16GB) DDR4</a></p>
+<p><a href="https://amzn.to/3AnCioj"><img src="https://m.media-amazon.com/images/I/71-ljG6xTuL._AC_SL1500_.jpg" alt="Netac 32GB (2x16GB) DDR4"></a></p>
+<h5 id="nvme-boot-drive">NVMe (Boot Drive)</h5>
+<p><a href="https://amzn.to/3tNMepF">SAMSUNG 970 EVO 250GB - NVMe</a></p>
+<p><a href="https://amzn.to/3tNMepF"><img src="https://m.media-amazon.com/images/I/61qspwg-bvL._AC_SL1500_.jpg" alt="SAMSUNG 970 EVO 250GB - NVMe"></a></p>
+<h5 id="hhds-for-storage">HHDs for Storage</h5>
+<p><a href="https://amzn.to/3KzngQO">(4) SanDisk Ultra 3D NAND 1TB</a></p>
+<p><a href="https://amzn.to/3KzngQO"><img src="https://m.media-amazon.com/images/I/71ETKYdbjLL._AC_SL1500_.jpg" alt="SanDisk Ultra 3D NAND 1TB"></a></p>
+<h5 id="power-supply">Power Supply</h5>
+<p><a href="https://amzn.to/3FSpCXB">Power Supply 500W 80 Plus Bronze</a></p>
+<p><a href="https://amzn.to/3FSpCXB"><img src="https://m.media-amazon.com/images/I/81sL3oDQI2L._AC_SL1500_.jpg" alt="Power Supply 500W 80 Plus Bronze"></a></p>
+<h4 id="software">Software</h4>
+<p><a href="https://proxmox.com/en/proxmox-ve">Proxmox Virtual Envirnoment (PVE) Server</a></p>
+<p><a href="https://proxmox.com/en/proxmox-ve"><img src="https://proxmox.com/images/proxmox/Proxmox_logo_standard_hex_400px.png" alt="Proxmox Backup Server"></a></p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit//content/posts/Physical%20Servers/proxmox-servers.md" title="Improve this page" target="_blank" rel="noopener">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/physical-servers/pbs/" title="Proxmox Backup Server" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Proxmox Backup Server</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/virtual-servers/docker/" title="Docker" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">Docker</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#hardware">Hardware</a>
+              <ul>
+                <li><a href="#case">Case</a></li>
+                <li><a href="#hard-drive-backplane">Hard Drive Backplane</a></li>
+                <li><a href="#motherboard">Motherboard</a></li>
+                <li><a href="#cpu">CPU</a></li>
+                <li><a href="#memory">Memory</a></li>
+                <li><a href="#nvme-boot-drive">NVMe (Boot Drive)</a></li>
+                <li><a href="#hhds-for-storage">HHDs for Storage</a></li>
+                <li><a href="#power-supply">Power Supply</a></li>
+              </ul>
+            </li>
+            <li><a href="#software">Software</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#achievements">Achievements</a>
+                </li>
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+            <li><span>Email: </span> <span>ryan.anderson@rylees.net</span></li>
+            
+            <li><span>Phone: </span> <span>&#43;1 (615) 338-5960</span></li>
+            
+          </ul>
+        </div>
+        
+        
+        
+          
+          <div class="col-md-4 col-sm-12">
+            <p>Stay up to date with email notification</p>
+            
+             
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                  <small id="emailHelp" class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small>
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+              </form>
+            
+          </div>
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2021 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

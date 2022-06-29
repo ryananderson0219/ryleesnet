@@ -1,0 +1,27 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Proxmox VE (PVE)
+  logo: "/images/sections/skills/proxmox-logo-stacked-840px.png"
+  summary: "I have deployed and maintained a Proxmox VE Environment with Ceph, NFS, Local Storage options for over 6 years. I separated storage traffic, migration traffic, and VM traffic onto different networks for the best performance."
+  url: "https://www.proxmox.com/"
+
+- name: Proxmox Backup Server (PBS)
+  logo: "/images/sections/skills/proxmox-logo-stacked-840px.png"
+  summary: "I setup Proxmox Backup Server (PBS) for backing up the entire Proxmox Virtual Environment. I setup encryption for the backups so they are secured. This solution makes backups and restores fast and secure."
+  url: "https://www.proxmox.com/"
+
+- name: TrueNAS
+  logo: "/images/sections/skills/truenas_400x400.jpg"
+  summary: "Setup TrueNAS for SMB, NFS, and iSCSI shares. Setup with local accounts and also tied with Active Directory."
+  url: "https://www.truenas.com/"
