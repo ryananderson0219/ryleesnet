@@ -1,4 +1,5 @@
-baseURL: https://rylees.net
+#baseURL: https://rylees.net
+baseURL: https://ryananderson0219.github.io/ryleesnet/
 
 languageCode: en-us
 title: "Rylees.net"
