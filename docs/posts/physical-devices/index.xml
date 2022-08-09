@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Physical Devices on Rylees.net</title>
-    <link>https://rylees.net/posts/physical-devices/</link>
+    <link>/posts/physical-devices/</link>
     <description>Recent content in Physical Devices on Rylees.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jun 2020 06:00:20 +0600</lastBuildDate><atom:link href="https://rylees.net/posts/physical-devices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jun 2020 06:00:20 +0600</lastBuildDate><atom:link href="/posts/physical-devices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Access Points</title>
-      <link>https://rylees.net/posts/physical-devices/access-points/</link>
+      <link>/posts/physical-devices/access-points/</link>
       <pubDate>Mon, 08 Jun 2020 06:00:20 +0600</pubDate>
       
-      <guid>https://rylees.net/posts/physical-devices/access-points/</guid>
+      <guid>/posts/physical-devices/access-points/</guid>
       <description>Ubiquiti Access Points I currenty have two Ubiquiti APs setup in my home. One upstairs and one downstairs. I have provisioned them with the</description>
     </item>
     
