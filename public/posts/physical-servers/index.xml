@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Physical Servers on Rylees.net</title>
-    <link>https://ryananderson0219.github.io/ryleesnet/posts/physical-servers/</link>
+    <link>https://ryleesnet.github.io/posts/physical-servers/</link>
     <description>Recent content in Physical Servers on Rylees.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jun 2020 06:00:20 +0600</lastBuildDate><atom:link href="https://ryananderson0219.github.io/ryleesnet/posts/physical-servers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jun 2020 06:00:20 +0600</lastBuildDate><atom:link href="https://ryleesnet.github.io/posts/physical-servers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proxmox Backup Server</title>
-      <link>https://ryananderson0219.github.io/ryleesnet/posts/physical-servers/pbs/</link>
+      <link>https://ryleesnet.github.io/posts/physical-servers/pbs/</link>
       <pubDate>Mon, 08 Jun 2020 06:00:20 +0600</pubDate>
       
-      <guid>https://ryananderson0219.github.io/ryleesnet/posts/physical-servers/pbs/</guid>
+      <guid>https://ryleesnet.github.io/posts/physical-servers/pbs/</guid>
       <description>Below is my current setup for my Proxmox Backup Server. As you can see, this isn’t “enterprise-grade” hardware. This is consumer-grade hardware, but this is for a homelab with noise being the major factor. This saves me in electricity and also in noise level.
 Hardware Price/Each Quantity Cost Chenbro Rackmount 4U Server Chassis $166.08 1 $166.08 4-Bay Mobile Rack Backplane $112.53 1 $112.53 ASRock Motherboard (Z390M-ITX/AC) $-.&amp;ndash; 1 $-.&amp;ndash; Intel Core i5-9400 $183.</description>
     </item>
     
     <item>
       <title>Proxmox Servers</title>
-      <link>https://ryananderson0219.github.io/ryleesnet/posts/physical-servers/proxmox-servers/</link>
+      <link>https://ryleesnet.github.io/posts/physical-servers/proxmox-servers/</link>
       <pubDate>Mon, 08 Jun 2020 06:00:20 +0600</pubDate>
       
-      <guid>https://ryananderson0219.github.io/ryleesnet/posts/physical-servers/proxmox-servers/</guid>
+      <guid>https://ryleesnet.github.io/posts/physical-servers/proxmox-servers/</guid>
       <description>This is the hardware list that I have used to build my own &amp;ldquo;servers&amp;rdquo;. Please note that this is all consumer-grade hardware, but is perfect for my setup: Less power, noise, and heat. Keep in mind that I have bought/built two of these machines. They are slightly different, but they both have AMD CPUs, one is a Ryzen and the other is an FX. Both have 8vCPUs, 32GB Memory, 2TBs HD space.</description>
     </item>
     
