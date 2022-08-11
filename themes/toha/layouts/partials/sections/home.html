@@ -93,7 +93,7 @@
     }
     @media (min-width: 1201px) and (max-width: 1500px) { /* or 301 if you want really the same as previously.  */
       #homePageBackgroundImageDivStyled {   
-          /* background-image: url('{{ strings.TrimSuffix "/" site.BaseURL }}{{ $large.RelPermalink }}'); */
+          background-image: url('{{ $large.RelPermalink }}'); 
         }
     }
     @media (min-width: 1501px) { /* or 301 if you want really the same as previously.  */
