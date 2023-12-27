@@ -23,7 +23,23 @@ experiences:
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Design, deploy, and maintain infrastructure hardware/software for purposes of learning. 
+    - Design, deploy, and maintain infrastructure hardware/software for purposes of learning.
+
+- company:
+    name: BFC Solutions
+    url: "https://bfcsolutions.com"
+    location: Nashville, TN
+    overview: BFC Solutions, formerly Bonded Filter Co., merged with PureAir in 2018 to become the largest self-performing, preventive maintenance service provider for commercial HVAC systems in the U.S.
+  positions:
+  - designation: Systems Administrator
+    start: January 2022
+    #end: 
+    responsibilities:
+    - Provision cell phones via IBM MaaS360 for field techs.
+    - Deploy and manage endpoints for employees - Desktops,Laptops, and peripherals.
+    - Support remote users via Connectwise Automate or Teamviewer.
+    - Support Infrastructure including VMWare ESXi, Exchange,Terminal Servers.
+    - Provision accounts for AD and E-mail.
 
 - company:
     name: Loews Hotels & Co
@@ -33,7 +49,7 @@ experiences:
   positions:
   - designation: User Services Desk Supervisor
     start: August 2021
-    #end: 
+    end: January 2022 
     responsibilities:
     - Supervise and provide technical guidance to the staff of Service Desk analysts.
     - Coordinate with Hotel IT staff and vendors to resolve complex issues.
